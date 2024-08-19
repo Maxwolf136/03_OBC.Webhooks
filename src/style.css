@@ -1,0 +1,103 @@
+:root {
+  /* Grayscale Colors */
+  --bim-ui_gray-0: hsl(210 10% 5%);
+  --bim-ui_gray-1: hsl(210, 12%, 93%);
+  --bim-ui_gray-2: hsl(210, 14%, 89%);
+  --bim-ui_gray-4: hsl(209, 38%, 28%);
+  --bim-ui_gray-6: hsl(210 10% 60%);
+  --bim-ui_gray-8: hsl(210, 2%, 47%);
+  --bim-ui_gray-9: hsl(210, 3%, 27%);
+  --bim-ui_gray-10: hsl(240, 2%, 10%);
+
+  /* Brand Colors */
+  --bim-ui_main-base: #adacaf;
+  --bim-ui_accent-base: #5f5f5e;
+
+  /* Brand Colors Contrasts */
+  --bim-ui_main-contrast: var(--bim-ui_gray-10);
+  --bim-ui_accent-contrast: var(--bim-ui_gray-0);
+}
+
+/* Background Colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bim-ui_bg-base: var(--bim-ui_gray-0);
+    --bim-ui_bg-contrast-10: var(--bim-ui_gray-1);
+    --bim-ui_bg-contrast-20: var(--bim-ui_gray-2);
+    --bim-ui_bg-contrast-40: var(--bim-ui_gray-4);
+    --bim-ui_bg-contrast-60: var(--bim-ui_gray-6);
+    --bim-ui_bg-contrast-80: var(--bim-ui_gray-8);
+    --bim-ui_bg-contrast-100: var(--bim-ui_gray-10);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bim-ui_bg-base: var(--bim-ui_gray-10);
+    --bim-ui_bg-contrast-10: var(--bim-ui_gray-9);
+    --bim-ui_bg-contrast-20: var(--bim-ui_gray-8);
+    --bim-ui_bg-contrast-40: var(--bim-ui_gray-6);
+    --bim-ui_bg-contrast-60: var(--bim-ui_gray-4);
+    --bim-ui_bg-contrast-80: var(--bim-ui_gray-2);
+    --bim-ui_bg-contrast-100: var(--bim-ui_gray-0);
+    --bim-ui_accent-base: #4b2396;
+  }
+}
+
+html.bim-ui-dark {
+  --bim-ui_bg-base: var(--bim-ui_gray-0);
+  --bim-ui_bg-contrast-10: var(--bim-ui_gray-1);
+  --bim-ui_bg-contrast-20: var(--bim-ui_gray-2);
+  --bim-ui_bg-contrast-40: var(--bim-ui_gray-4);
+  --bim-ui_bg-contrast-60: var(--bim-ui_gray-6);
+  --bim-ui_bg-contrast-80: var(--bim-ui_gray-8);
+  --bim-ui_bg-contrast-100: var(--bim-ui_gray-10);
+}
+
+html.bim-ui-light {
+  --bim-ui_bg-base: var(--bim-ui_gray-10);
+  --bim-ui_bg-contrast-10: var(--bim-ui_gray-9);
+  --bim-ui_bg-contrast-20: var(--bim-ui_gray-8);
+  --bim-ui_bg-contrast-40: var(--bim-ui_gray-6);
+  --bim-ui_bg-contrast-60: var(--bim-ui_gray-5);
+  --bim-ui_bg-contrast-80: var(--bim-ui_gray-2);
+  --bim-ui_bg-contrast-100: var(--bim-ui_gray-0);
+  --bim-ui_accent-base: var(--bim-ui_main-base);
+}
+
+* {
+  margin: 0;
+}
+
+header {
+  height: 20px;
+  width: 20px;
+}
+
+body {
+  height: 100vh;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+bim-grid:not([floating])>bim-panel {
+  border-radius: 0;
+}
+
+bim-grid[floating]>bim-toolbar {
+
+  justify-self: center;
+}
+
+dialog {
+  background-color: transparent;
+  border: none;
+  margin: auto;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
